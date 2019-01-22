@@ -11,10 +11,10 @@
 			<div class="product-preview__info-price"><span>{{price}}</span></div>
 
 			<div class="product-preview__action">
-				<button class="button button_buy">
+				<div class="link link_buy">
 					<span class="icon-basket icon"></span>
 					<span>Купить</span>
-				</button>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -89,5 +89,32 @@ export default {
 		background-color: #fff;
 		transition: 180ms ease;
 	}
+}
+
+.link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    font-size: 16px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 180ms ease;
+
+    &_buy {
+        width: 100%;
+        color: #4763ab;
+
+        &:hover {
+            color: #ff787f;
+        }
+
+        .icon {
+            margin-right: 5px;
+            font-size: 20px;
+        }
+    }
 }
 </style>

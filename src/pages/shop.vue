@@ -247,31 +247,4 @@ export default {
         }
     }
 }
-
-.button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
-    font-size: 16px;
-    background-color: #fff;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    transition: 180ms ease;
-
-    &_buy {
-        width: 100%;
-        color: #4763ab;
-
-        &:hover {
-            color: #ff787f;
-        }
-
-        .icon {
-            margin-right: 5px;
-            font-size: 20px;
-        }
-    }
-}
 </style>

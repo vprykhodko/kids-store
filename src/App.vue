@@ -1,7 +1,7 @@
 <template>
 	<div id="app">
 		<Header />
-		<Product />
+		<Shop />
 		<Footer />
 		<Socials />
 
@@ -11,7 +11,7 @@
 
 <script>
 import Header from './components/Header.vue'
-// import Shop from './pages/shop.vue'
+import Shop from './pages/shop.vue'
 import Product from './pages/product.vue'
 import Footer from './components/Footer.vue'
 import Socials from './components/Socials.vue'
@@ -19,7 +19,7 @@ import Socials from './components/Socials.vue'
 export default {
 	name: 'app',
 	components: {
-		Header, Footer, Socials, Product
+		Header, Footer, Socials, Product, Shop
 	}
 }
 </script>
