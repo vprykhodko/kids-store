@@ -1,0 +1,25 @@
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 200px;
+    height: 60px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 180ms ease;
+}
+.button_blue {
+    background-color: #4763ab;
+    color: #fff;
+}
+.button_blue .icon {
+    margin-left: -12px;
+    margin-right: 10px;
+    font-size: 20px;
+}
+.button_blue:hover {
+    background-color: #ff787f;
+}
