@@ -9,7 +9,10 @@
                         <img src="../assets/img/example_1.jpg" alt="">
                     </div>
                     <div class="cart-list__item-info">
-                        <div class="tag-list"><span>Accessories, Baby Boy, Baby Girl, Blue Jeans, Bottoms</span></div>
+                        <div class="tag-list">
+                            <span class="icon-tag icon"></span>
+                            <span>Accessories, Baby Boy, Baby Girl, Blue Jeans, Bottoms</span>
+                        </div>
                         <div class="name"><span>contrast embroidered top</span></div>
 
                         <div class="action">
@@ -25,13 +28,55 @@
                     <div class="delete">+</div>
                 </div>
             </div>
+
+            <div class="cart-panel">
+                <div class="cart-panel_border">
+                    <div class="cart-panel__item cart-panel__item_center">
+                        <div class="cart-panel__item-subtitle"><span>Сумма заказа:</span></div>
+                        <div class="cart-panel__item-total"><span>49.9$</span></div>
+                    </div>
+
+                    <div class="cart-panel__item">
+                        <div class="cart-panel__item-subtitle"><span>Способ оплаты:</span></div>
+                        <div class="cart-panel__item-selectbox">
+                            <SelectBox :options="['Приват Банк', 'Sort by popularity']"
+                            direction="bottom" />
+                        </div>
+                    </div>
+
+                    <div class="cart-panel__item">
+                        <div class="cart-panel__item-subtitle"><span>Способ доставки:</span></div>
+                        <div class="cart-panel__item-selectbox">
+                            <SelectBox :options="['Новая почта', 'Sort by popularity']"
+                            direction="bottom" />
+                        </div>
+                    </div>
+
+                    <div class="cart-panel__item cart-panel__item_center cart-panel__item_action">
+                        <button class="button button_blue">
+                            <span class="icon-wallet icon"></span>
+                            <span>Оформить заказ</span>
+                        </button>
+
+                        <button class="button button_yellow">
+                            <span class="icon-question icon"></span>
+                            <span>Задать вопрос</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </template>
 
 <script>
+import SelectBox from '../components/SelectBox.vue'
+
 export default {
     name: 'Cart',
+    components: {
+        SelectBox
+    },
     data: () => ({
         products: [
             {
@@ -53,10 +98,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.cart {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-top: 50px;
+}
+
 .cart-list {
     width: 100%;
-    max-width: 800px;
-    margin-top: 50px;
+    min-width: 800px;
+    margin-right: 50px;
     padding: 20px;
     background-color: #fff;
 
@@ -78,8 +130,8 @@ export default {
         &-photo {
             position: relative;
             overflow: hidden;
-            height: 200px;
-            width: 170px;
+            height: 160px;
+            width: 130px;
             margin-right: 20px;
 
             img {
@@ -90,11 +142,18 @@ export default {
 
         &-info {
             .tag-list {
+                display: flex;
+                align-items: center;
                 color: #999;
+
+                .icon {
+                    margin-right: 10px;
+                    font-size: 20px;
+                }
             }
 
             .name {
-                margin: 10px 0 20px 0;
+                margin: 10px 0 50px 0;
                 text-transform: uppercase;
                 font-size: 24px;
             }
@@ -125,6 +184,54 @@ export default {
             &:hover {
                 color: #222;
             }
+        }
+    }
+}
+
+.cart-panel {
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+
+    &_border {
+        height: 100%;
+        box-sizing: border-box;
+        padding: 20px;
+        border: 1px solid #eee;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+
+        &_action {
+            margin-top: 50px;
+
+            .button {
+                margin: 0 10px;
+            }
+        }
+
+        &_center {
+            justify-content: center;
+        }
+
+        &-subtitle {
+            margin-right: 30px;
+            font-size: 16px;
+        }
+
+        &-total {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 40px;
+        }
+
+        &-selectbox {
+            display: flex;
+            justify-content: flex-end;
+            width: 300px;
         }
     }
 }

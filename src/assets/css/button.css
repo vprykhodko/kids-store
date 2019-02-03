@@ -11,15 +11,22 @@
     cursor: pointer;
     transition: 180ms ease;
 }
-.button_blue {
-    background-color: #4763ab;
-    color: #fff;
-}
-.button_blue .icon {
+.button .icon {
     margin-left: -12px;
     margin-right: 10px;
     font-size: 20px;
 }
+.button_blue {
+    background-color: #4763ab;
+    color: #fff;
+}
 .button_blue:hover {
     background-color: #ff787f;
+}
+.button_yellow {
+    background-color: #fdec53;
+    color: #fff;
+}
+.button_yellow:hover {
+    background-color: #7dff78;
 }

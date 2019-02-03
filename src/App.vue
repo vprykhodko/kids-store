@@ -13,6 +13,7 @@
 import Header from './components/Header.vue'
 // import Shop from './pages/Shop.vue'
 import Cart from './pages/Cart.vue'
+// import Home from './pages/Home.vue'
 // import Product from './pages/Product.vue'
 import Footer from './components/Footer.vue'
 import Socials from './components/Socials.vue'
