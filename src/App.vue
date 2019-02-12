@@ -1,7 +1,7 @@
 <template>
 	<div id="app">
 		<Header />
-		<Shop />
+		<Cart />
 		<Footer />
 		<Socials />
 
@@ -11,15 +11,17 @@
 
 <script>
 import Header from './components/Header.vue'
-import Shop from './pages/shop.vue'
-import Product from './pages/product.vue'
+// import Shop from './pages/Shop.vue'
+import Cart from './pages/Cart.vue'
+// import Home from './pages/Home.vue'
+// import Product from './pages/Product.vue'
 import Footer from './components/Footer.vue'
 import Socials from './components/Socials.vue'
 
 export default {
 	name: 'app',
 	components: {
-		Header, Footer, Socials, Product, Shop
+		Header, Footer, Socials, Cart
 	}
 }
 </script>
